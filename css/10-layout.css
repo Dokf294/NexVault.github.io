@@ -18,6 +18,7 @@
 } 
 .main-layout{
     display: grid;
+    height: 50vw;
     grid-template-rows: .5fr 1fr 1fr;
     /* background-color: rgb(111, 255, 0); */
     

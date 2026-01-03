@@ -1,10 +1,23 @@
 @charset "UTF-8";
 
-.page-layout{  
-    font-family: var(--font-nutino);
-    min-height: 300vh; 
+@font-face {
+    font-family: "Helvetica-NeueCondBold";
+    src: url('../fonts/Helvetica-NeueCondBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica-NeueCond";
+    src: url('../fonts/Helvetica-NeueCond.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page-layout {
+    font-family: var(--font-Helvetica-Neue);
+    min-height: 100vh;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-} 
-
+}
