@@ -2,8 +2,7 @@
 
 .body-page-layout{
     display: grid;
-    height: 100%;  
-
+    min-height: 150vh;
     background-color: var(--color-gray-60);
 
     grid-template-rows: 98px 1fr 200px;
@@ -14,13 +13,12 @@
     display: grid;
     grid-template-columns: minmax(6rem, 12rem) 1fr 1fr;
     grid-template-rows: inherit;
-    z-index: 3;
 } 
 .main-layout{
     display: grid;
-    height: 60rem;
-    /* max-height: 50vw; */
-    grid-template-rows: .5fr 1fr 1fr;
+    
+    grid-template-rows: 10rem 50rem 30rem;
+
     /* background-color: rgb(111, 255, 0); */
     
 }
