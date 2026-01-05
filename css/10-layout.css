@@ -31,21 +31,40 @@
     content: "";
     position: absolute;
     top: -20%;
-    left: 25%; 
+    left: 25%;
     width: 1px;
-    height: 58.15%; 
+    height: 61.25%;
     background: rgba(255, 255, 255, 0.3);
     box-shadow:
         25vw 0 0 rgba(255, 255, 255, 0.3),
         50vw 0 0 rgba(255, 255, 255, 0.3),
-        75vw 0 0 rgba(255, 255, 255, 0.3); /* вот добавили четвёртую линию */
+        75vw 0 0 rgba(255, 255, 255, 0.3);
+        
     pointer-events: none;
 }
 
-
-
-
 .footer-layout {
+    position: relative;
     /* background-color: rgb(21, 0, 255); */
-    height: 20rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    height: 40rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/* .footer-layout::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+
+    box-shadow:
+        20vw 0 0 rgba(255, 255, 255, 0.3),
+        40vw 0 0 rgba(255, 255, 255, 0.3),
+        60vw 0 0 rgba(255, 255, 255, 0.3);
+} */

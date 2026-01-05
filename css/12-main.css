@@ -96,16 +96,19 @@
 
 .main-layout .services {
     display: grid;
+
     height: 1100px;
-    /* background-color: #575454; */
+    /* background-color: #c40000; */
     grid-template-columns: 1fr 1fr;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .main-layout .services .lock {
     display: flex;
     justify-content: start;
-    /* background-color: #000; */
+    
+    /* background-color: #f3f3f3; */
 }
 
 .main-layout .services .lock img {
@@ -237,20 +240,21 @@
     width: 60rem;
     left: 10%;
     top: 15%;
-    
+
 }
+
 .main-layout .services .lock .grid::before {
     content: "";
     position: absolute;
     height: 39rem;
-    
+
     width: 60rem;
     pointer-events: none;
     opacity: .1;
     background-image: url(https://payloadcms.com/images/scanline-light.png);
 }
 
-.Desktop_crosshair{
+.Desktop_crosshair {
     position: absolute;
     top: 0%;
     left: 0%;
@@ -260,26 +264,132 @@
 }
 
 /* [achivent] */
-.main-layout .layout-achivent{
-    height: 650px;
-    background-color: red;
-}
-
-.layout-achivent .achivent-bg{
-    display: flex;
-    align-items: center;
-    
-    height: 100%;
-    background-color: rgb(165, 0, 236);
-}
-
-.achivent-bg .achivent {
+.main-layout .layout-achivent {
     position: relative;
-    height: 95%;
-    width: 98%;
-    left: 2%;
-    background-color: #000000;
+    height: 650px;
+    /* background-color: red; */
+    z-index: 2;
+
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 90%,
+            transparent);
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 90%,
+            transparent);
+    padding: 1rem;
 }
+
+/* .main-layout .layout-achivent::after{
+    content: "";
+    position: absolute;
+    height: 110%;
+    width: 100%; 
+    left: 0;
+    top: 0;
+    
+
+} */
+.layout-achivent .achivent {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 4rem;
+    /* background-color: rgb(236, 153, 0); */
+    
+}
+
+.layout-achivent .achivent::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+
+    width: 100%;
+    pointer-events: none;
+    opacity: .1;
+    background-image: url(https://payloadcms.com/images/scanline-light.png);
+
+    -webkit-mask-image: linear-gradient(to right,
+            transparent,
+            black 5%,
+            black 95%,
+            transparent);
+
+    mask-image: linear-gradient(to right,
+            transparent,
+            rgb(252, 199, 199) 5%,
+            black 95%,
+            transparent);
+    
+    z-index: 2;
+}
+
+.achivent .achivent-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+    /* background-color: red; */
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+
+    padding: 1rem;
+
+}
+
+
+.layout-achivent .achivent .achivent-selection .icon {
+    /* background-color: #575454; */
+    height: 8rem;
+    width: 8rem;
+}
+
+.layout-achivent .achivent .achivent-selection .icon svg {
+    /* background-color: #575454; */
+    fill: #e6e3e3;
+
+    transition: fill var(--time-animation), transform 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.layout-achivent .achivent .achivent-selection:hover .icon svg {
+    /* background-color: #575454; */
+    fill: #ffffff;
+    transform: scale(1.07);
+
+}
+
+.layout-achivent .achivent .achivent-selection .header-text {
+    font-size: 1.7rem;
+    color: #fff;
+
+    font-family: var(--font-Helvetica-Neue);
+
+}
+
+.layout-achivent .achivent .achivent-selection .text {
+    font-size: 1rem;
+    font-family: var(--font-nutino);
+    color: #e6e3e3;
+    text-align: center;
+    
+
+}
+
 @media (max-width: 1000px) {
     .introduction {
         grid-template-columns: 1fr .7fr;
