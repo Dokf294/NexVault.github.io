@@ -1,3 +1,35 @@
+.main-layout {
+    position: relative;
+    display: grid;
+    height: 201.4rem;
+    
+}
+
+.main-layout::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 41.25%;
+
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-size: 25% 100%;
+    background-repeat: repeat-x;
+
+    -webkit-mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 12%, 
+        black 100%);
+    mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 12%, 
+        black 100%);
+
+    pointer-events: none;
+}
+
 .main-layout .introduction {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -47,11 +79,14 @@
     position: absolute;
     top: 10%;
     left: 0%;
-    width: 50.2%;
+    width: 50.1%;
     height: 1px;
-    background: linear-gradient(to right,
-            rgba(255, 255, 255, 0.3));
-    z-index: 2;
+    
+    background: linear-gradient(to right, 
+        rgba(255, 255, 255, 0.3) 0%, 
+        rgba(255, 255, 255, 0.3) 70%, 
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .main-layout .header .motivational-text {
@@ -107,7 +142,7 @@
 .main-layout .services .lock {
     display: flex;
     justify-content: start;
-    
+
     /* background-color: #f3f3f3; */
 }
 
@@ -303,7 +338,7 @@
     width: 100%;
     gap: 4rem;
     /* background-color: rgb(236, 153, 0); */
-    
+
 }
 
 .layout-achivent .achivent::before {
@@ -327,7 +362,7 @@
             rgb(252, 199, 199) 5%,
             black 95%,
             transparent);
-    
+
     z-index: 2;
 }
 
@@ -386,7 +421,7 @@
     font-family: var(--font-nutino);
     color: #e6e3e3;
     text-align: center;
-    
+
 
 }
 

@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/added/header.css">
+    <title></title>
+</head>
+<body class="page-layout">
+    <div class="body-page-layout">
+
+    </div>
+    <script>
+        fetch('../html/general/header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementsByClassName('body-page-layout')[0].insertAdjacentHTML('afterbegin', html);
+            }).catch(err=>console.error("header is not loaded",err));
+    </script>
+</body>
+</html>
