@@ -7,7 +7,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
-    height: 60rem;
+    height: 65rem;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -89,32 +89,23 @@
     line-height: 0;
 }
 
-.footer-layout::after {
-    content: "NexVault";
+.footer-text {
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 49.5%;
 
-    font-size: 40rem;
+    font-size: 30vw;
     font-weight: 800;
     color: #1d1d1d;
-
+    width: 100%;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.8) 0%, transparent 150px);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    z-index: 1; 
 }
 
-.footer-layout::before {
-    content: "NexVault";
+.footer-text::after {
+    content: attr(data-text);
     position: absolute;
-    top: 100%;
-    left: 50%;
-
-    font-size: 40rem;
-    font-weight: 800;
+    inset: 0;
 
     background: url("../assets/image/noise.png") repeat;
     background-size: 400px 400px;
@@ -123,8 +114,7 @@
     -webkit-background-clip: text;
     background-clip: text;
 
-    transform: translate(-50%, -50%);
     z-index: 2;
-
     pointer-events: none;
 }
+

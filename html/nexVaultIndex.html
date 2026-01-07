@@ -228,21 +228,19 @@
 
     </div>
     <script>
-        fetch('../html/general/header.html')
+        fetch('../html/general/header.txt')
             .then(response => response.text())
             .then(html => {
                 document.getElementsByClassName('body-page-layout')[0].insertAdjacentHTML('afterbegin', html);
             }).catch(err => console.error("header is not loaded", err));
 
-        fetch('../html/general/footer.html')
+        fetch('../html/general/footer.txt')
             .then(r => r.text())
             .then(html => {
                 document
                     .querySelector('.body-page-layout')
                     .insertAdjacentHTML('beforeend', html);
             });
-
-
     </script>
     <script src="../js/describeInfoService.js"></script>
 </body>
