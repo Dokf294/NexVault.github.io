@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+:root {
+    /* Начальные координаты фонарика (центр экрана) */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
 .footer-layout {
     position: relative;
     overflow: hidden;
@@ -12,12 +17,14 @@
 }
 
 .footer-layout .row {
+    position: relative;
     display: flex;
     flex-direction: column;
     /* background-color: rgb(184, 146, 146); */
     width: 25rem;
     border-left: 1px solid rgba(255, 255, 255, .3);
     padding-top: 15rem;
+    z-index: 10;
 }
 
 .footer-layout .row .header-row {
@@ -93,28 +100,44 @@
     position: absolute;
     top: 100%;
     left: 49.5%;
-
     font-size: 30vw;
     font-weight: 800;
-    color: #1d1d1d;
+    color: #000000; 
     width: 100%;
     transform: translate(-50%, -50%);
-    z-index: 1; 
+    z-index: 1;
+    --x: 0%;
+    --y: 0%;
+    pointer-events: none;
 }
 
 .footer-text::after {
     content: attr(data-text);
     position: absolute;
     inset: 0;
-
-    background: url("../assets/image/noise.png") repeat;
+    background: url("../assets/image/noise.png") repeat, rgb(77, 75, 75); 
     background-size: 400px 400px;
-
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-
     z-index: 2;
     pointer-events: none;
-}
+
+    -webkit-mask-image: radial-gradient(
+        circle 40vw at var(--x) var(--y), 
+        black 0%, 
+        black 30%,           
+        rgba(0, 0, 0, 0.4) 65%, 
+        rgba(0, 0, 0, 0.1) 90%, 
+        transparent 100%
+    );
+    mask-image: radial-gradient(
+        circle 40vw at var(--x) var(--y), 
+        black 0%, 
+        black 30%, 
+        rgba(0, 0, 0, 0.4) 65%, 
+        rgba(0, 0, 0, 0.1) 90%, 
+        transparent 100%
+    );
+} 
 

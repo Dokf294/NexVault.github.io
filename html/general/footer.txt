@@ -110,4 +110,5 @@
         </div>
     </div>
     <div class="footer-text" data-text="NexVault">NexVault</div>
-</div>
+</div>  
+

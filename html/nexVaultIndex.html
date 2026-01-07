@@ -224,10 +224,77 @@
                     </div>
                 </div>
             </div>
+            <div class="purchase">
+                <div class="start-up-package">
+                    <div class="image-package">
+                        <img src="../assets/image/start-up.png" loading="lazy" alt="">
+                    </div>
+                    <div class="company-icons-package">
+
+                    </div>
+                    <div class="describes-package">
+                        Get access to important data protection. The package includes the following features: Deep
+                        Packet Inspection, AI-based threat detection, DDoS protection, Cloud & On-Premise support.
+                        Additional built-in features are also included.
+                    </div>
+                    <div class="date-package">
+                        <p>"1 Month"</p>
+                        <input type="text">
+                    </div>
+                    <div class="price-package">
+                        $10.00
+                    </div>
+                    <div class="buy-package">
+                        ADD TO CARD
+                    </div>
+                    <div class="options-package">
+                        <div class="console"></div>
+                        <div class="modern"></div>
+                        <div class="server"></div>
+                    </div>
+                </div>
+                <div class="buisnesses-package">
+                    <div class="company-icons-package">
+                        <img src="../assets/image/Buisness.png" loading="lazy" alt="">
+                    </div>
+                    <div class="describes-package">
+                        Access features for start-ups as well as additional features for corporate protection: Real-Time
+                        Behavioral Analytics, Automated Incident Response (SOAR), Advanced Threat Intelligence Feeds,
+                        Compliance & Forensics Toolkit. Additional built-in features are also included.
+                    </div>
+                    <div class="date-package"></div>
+                    <div class="price-package"></div>
+                    <div class="buy-package"></div>
+                    <div class="options-package"></div>
+                </div>
+            </div>
         </div>
 
     </div>
     <script>
+        function initFooterAnimation() {
+            const text = document.querySelector('.footer-text');
+            if (!text) return;
+
+            let mouseX = 50, mouseY = 50;
+            let currentX = 50, currentY = 50;
+
+            document.addEventListener("mousemove", (e) => {
+                const rect = text.getBoundingClientRect();
+                mouseX = ((e.clientX - rect.left) / rect.width) * 100;
+                mouseY = ((e.clientY - rect.top) / rect.height) * 100;
+            });
+
+            function animate() {
+                currentX += (mouseX - currentX) * 0.1;
+                currentY += (mouseY - currentY) * 0.1;
+                text.style.setProperty('--x', `${currentX}%`);
+                text.style.setProperty('--y', `${currentY}%`);
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
         fetch('../html/general/header.txt')
             .then(response => response.text())
             .then(html => {
@@ -240,6 +307,7 @@
                 document
                     .querySelector('.body-page-layout')
                     .insertAdjacentHTML('beforeend', html);
+                initFooterAnimation();
             });
     </script>
     <script src="../js/describeInfoService.js"></script>
