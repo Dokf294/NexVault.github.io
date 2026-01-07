@@ -1,0 +1,199 @@
+.title,
+.article-to-text {
+    padding-top: 6rem;
+
+    align-items: center;
+    padding: 10.5rem var(--side-padding);
+
+}
+
+.title{
+    position: relative;
+    bottom: 10%;
+}
+.title .title-top-header {
+    font-size: 4.5rem;
+    white-space: nowrap;
+    padding-left: 3.5rem;
+    color: #ffff;
+    height: 110px;
+}
+
+.title .image {
+    position: relative;
+    display: flex;
+    place-content: center;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 32px;
+    /* background-color: red; */
+    box-shadow: 0 0 100px 1px #ffffff1e;
+}
+
+.title .image img {
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.title .title-bottom-header {
+    color: hsl(36, 83%, 77%);
+    padding-left: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.article-to-text {
+    position: relative;
+    padding: 0 var(--side-padding-2);
+    color: #fff;
+    bottom: 3%;
+    box-sizing: border-box;
+
+}
+
+.title-article:first-child {
+    color: #fff;
+}
+
+.title-article {
+    font-size: 4.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    color: hsl(36, 83%, 77%);
+    height: 100px;
+}
+
+@media(max-width: 1170px) {
+    .article-to-text :is(.DPI, .analysis, .traffic,.packet-inspection ,.integration-ai, .DPI-corporate) {
+        padding-bottom: 4rem;
+    }
+}
+
+.article {
+    font-size: 1.5rem;
+    line-height: .9;
+
+}
+
+.list {
+    list-style-type: armenian;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+
+}
+
+.list .mark {
+    padding: 1rem;
+    color: hsl(36, 83%, 77%);
+} 
+
+.article-to-text .example-1{
+    position: relative;
+    display: flex;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 0%); 
+    width: 70%;
+    transform: translate(-50%);
+}
+
+.article-to-text .example-1::before{
+    content: "";
+    position: absolute;
+    top: 8%;
+    height: 90%;
+    width: 49%;
+    border-left: 1px solid #fff;
+
+}
+.article-to-text  .example-1 .example-title{
+    font-size: 2.5rem;
+}
+
+.article-to-text  .example-1 .example-object{
+    font-size: 2rem;
+}
+
+.article-to-text  .example-1 :nth-child(n+3):nth-child(odd){
+   display: block;
+   background-image: url(../assets/svg/arrowdown_long.svg);
+   height: 3rem;
+   width: 3rem;
+   margin: 2rem;
+
+   background-size: cover;
+}
+
+.article-to-text  .example-1 :nth-child(n+2):nth-child(even){
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+.article-to-text  .example-1 :last-child{
+    margin-bottom: 1.5rem;
+}
+
+.article-to-text  .example-2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.article-to-text .example-2 :is(.user, .bot){
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-left: 2.5%;
+    padding-left: 1%;
+    column-gap: 3rem;
+    align-items: center;
+    
+} 
+.article-to-text .example-2 :is(.user, .bot){
+    border-left: 1px solid #fff;
+    
+}
+.article-to-text .example-2 :is(.user, .bot) :first-child{
+    color: hsl(36, 83%, 77%);
+    font-size: 30px;
+    margin-top: .5rem;
+}
+.article-to-text .example-2 :is(.user, .bot) :nth-child(even){
+    background-image: url(../assets/svg/arrowright_long.svg);
+    background-size: cover;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.article-to-text .example-2 .bot{
+    padding-top: 1rem;
+}
+
+.article-to-text .exmaple-article{
+    position: relative;
+    padding-left: 2rem;
+}
+.article-to-text .exmaple-article::before{
+    content: "";
+    position: absolute;
+    left: 1.5%;
+    bottom: 0;
+    height: 130%;
+    width: 100%;
+    border-left: 1px solid #fff;
+}
+@media (max-width: 1330px){
+    .article-to-text .example-2 :is(.user, .bot){
+        display: flex;
+    }
+}
+/* .article-to-text .example-2::before{
+    content: "";
+    position: absolute;
+    left: 2.5%;
+    top: 14%;
+    height: 68%;
+    width: 100%;
+    border-left: 1px solid #fff;
+} */
+

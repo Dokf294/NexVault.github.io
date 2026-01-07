@@ -1,20 +1,385 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/added/header.css">
+    <link rel="stylesheet" href="../css/added/page-two.css">
     <title></title>
 </head>
+
 <body class="page-layout">
     <div class="body-page-layout">
+        <div class="title">
+            <div class="title-top-header">
+                <p>Deep Packet Inspection</p>
+            </div>
+            <div class="image">
+                <img src="../assets/image/metal_darkblue.jpg" alt="">
+            </div>
+            <div class="title-bottom-header">
+                <p>How exactly does deep packet inspection work?</p>
+            </div>
 
+        </div>
+
+        <div class="article-to-text">
+            <section class="introduction title-article" style="height: 100px;">
+                <p>Introduction</p>
+            </section>
+
+
+            <p class="article">
+                In today's Internet environment, traditional network filtering methods—such as analyzing
+                IP addresses, ports, and packet headers—no longer provide a sufficient level of protection.
+                Modern attacks use encrypted channels, legitimate protocols, and complex behavior patterns,
+                masquerading as normal user traffic.
+            </p>
+
+            <p class="article">
+                Deep Packet Inspection (DPI) is a fundamental network security technology that allows traffic to be
+                analyzed at the content level, rather than just at the routing level. Within enterprise security
+                platforms, DPI is used as the core for threat detection, access policy control, application behavior
+                analysis, and real-time attack prevention.
+            </p>
+
+            <section class="packet-inspection title-article">
+                <p>What is Deep Packet Inspection?</p>
+            </section>
+
+
+            <article class="article " style="padding-top: 4rem;">
+                Deep Packet Inspection is a method of analyzing network traffic in which each data packet is
+                analyzed in its entirety, including:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">headers of all OSI model layers</li>
+                    <li class="mark">payload</li>
+                    <li class="mark">protocol structure</li>
+                    <li class="mark">sequence of packets in a stream</li>
+                </ul>
+
+                <p class="article">
+                    Unlike Stateful Inspection or L4 filtering, DPI operates at levels L4-L7, which allows:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">recognize real applications, not ports</li>
+                    <li class="mark">detect anomalies within legitimate protocols</li>
+                    <li class="mark">analyze commands, data, and connection behavior</li>
+                </ul>
+
+                <section class="DPI title-article">
+                    <p>DPI architecture in security applications</p>
+                </section>
+
+
+                <p class="article">
+                    In corporate solutions, DPI is not a separate module, but is integrated into the traffic processing
+                    chain.
+                </p>
+
+                <div class="example-1">
+                    <div class="example-title">
+                        <p>The typical architecture looks like this:</p>
+                    </div>
+                    <div class="example-object">Network Interface</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Packet Capture Engine</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Session Reconstruction</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Protocol Decoder</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Content & Behavior Analysis</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Policy / AI / Threat Engine</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Response & Logging</div>
+                </div>
+
+
+                <section class="packet-capture title-article">
+                    <p>Packet Capture</p>
+                </section>
+
+
+                <p class="article">
+                    In the first stage, the application intercepts traffic:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">at the network interface (NIC) level</li>
+                    <li class="mark">via kernel bypass (DPDK, XDP)</li>
+                    <li class="mark">via mirror/span port</li>
+                    <li class="mark">via built-in proxy or gateway</li>
+                </ul>
+
+                <p class="article-cursive">
+                    <i>The key task is to receive packets with minimal delay, without loss and without affecting
+                        throughput.</i>
+                </p>
+
+                <p class="article">
+                    For high-load systems, the following are used:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">zero-copy buffers</li>
+                    <li class="mark">multi-threaded packet queues</li>
+                    <li class="mark">NUMA-aware load balancing</li>
+                </ul>
+
+                <section class="session-reconstruction title-article">
+                    <p>Session Reconstruction</p>
+                </section>
+
+
+                <p class="article">
+                    Individual packets do not contain complete information on their own. The DPI system collects a
+                    data stream:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">TCP stream reassembly</li>
+                    <li class="mark">connection status tracking</li>
+                    <li class="mark">reassembly of fragmented packets</li>
+                </ul>
+
+                <p class="article">
+                    At this stage, the system understands:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">where the request begins and ends</li>
+                    <li class="mark">which packets belong to the same logical operation</li>
+                    <li class="mark">whether the sequence has been disrupted (a sign of an attack)</li>
+                </ul>
+
+                <section class="protocol-decoding title-article">
+                    <p>Protocol decoding</p>
+                </section>
+
+
+                <p class="article">
+                    After restoring the stream, data undergoes multi-level protocol analysis:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">Ethernet / IP / TCP / UDP</li>
+                    <li class="mark">TLS, HTTP(S), DNS, SMTP, FTP, WebSocket</li>
+                    <li class="mark">Proprietary and custom protocols</li>
+                </ul>
+
+                <p class="article">
+                    DPI does not trust port numbers. For example:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">HTTPS may not use port 443</li>
+                    <li class="mark">Malware may masquerade as HTTP</li>
+                    <li class="mark">DDoS may use legitimate protocols</li>
+                </ul>
+
+                <p class="article">
+                    The system identifies protocols by their signatures and data structure, rather than by external
+                    characteristics
+                </p>
+
+                <section class="payload-inspection title-article">
+                    <p>Payload Inspection</p>
+                </section>
+
+
+                <p class="article">
+                    At this stage, a deep analysis of the payload is performed:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">commands and parameters</li>
+                    <li class="mark">HTTP headers</li>
+                    <li class="mark">SQL / Shell / XSS payloads</li>
+                    <li class="mark">binary signatures of malicious code</li>
+
+                </ul>
+
+                <p class="article">
+                    The following are used:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">signature databases</li>
+                    <li class="mark">heuristic rules</li>
+                    <li class="mark">contextual analysis</li>
+                </ul>
+
+                <div class="inside-text-example">Exmaple:</div>
+
+                <p class="exmaple-article">
+                    <i>An HTTP request may be syntactically valid but contain an SQL injection within a parameter — DPI
+                        detects this before execution.</i>
+                </p>
+
+                <section class="analysis title-article">
+                    <p>Behavior and context analysis</p>
+                </section>
+
+
+                <p class="article">
+                    Modern DPI systems are not limited to signatures.
+                </p>
+
+                <p class="article-list">The following are analyzed:</p>
+
+                <ul class="list">
+                    <li class="mark">frequency of requests</li>
+                    <li class="mark">deviations from normal behavior</li>
+                    <li class="mark">inconsistencies with protocol logic</li>
+                    <li class="mark">suspicious sequences of actions</li>
+                </ul>
+
+                <div class="example-2">
+                    <div class="example-title">
+                        <p>Exmaple:</p>
+                    </div>
+                    <div class="user">
+                        <div class="example-object">Normal client</div>
+                        <div class="example-object"></div>
+                        <div class="example-object">login</div>
+                        <div class="example-object"></div>
+                        <div class="example-object">data</div>
+                        <div class="example-object"></div>
+                        <div class="example-object">logout</div>
+                    </div>
+                    <div class="bot">
+                        <div class="example-object">Bot</div>
+                        <div class="example-object"></div>
+                        <div class="example-object">login</div>
+                        <div class="example-object"></div>
+                        <div class="example-object">login</div>
+                        <div class="example-object"></div>
+                        <div class="example-object">flood</div>
+                    </div>
+                </div>
+
+                <p class="article" style="padding-top: 3rem;">
+                    DPI records patterns rather than individual packets
+                </p>
+
+                <section class="traffic title-article">
+                    <p>Working with encrypted traffic</p>
+                </section>
+
+
+                <p class="article-list">Since most traffic today is encrypted, DPI uses additional methods:</p>
+
+                <ul class="list">
+                    <li class="mark">frequency of requests</li>
+                    <li class="mark">deviations from normal behavior</li>
+                    <li class="mark">inconsistencies with protocol logic</li>
+                    <li class="mark">suspicious sequences of actions</li>
+                </ul>
+
+                <aside class="important">
+                    <span class="label">Important</span>
+                    <strong>DPI does not necessarily decrypt traffic to detect threats.</strong>
+                </aside>
+
+                <p class="article-list">In corporate environments, the following is possible:</p>
+
+                <ul class="list">
+                    <li class="mark">SSL/TLS termination</li>
+                    <li class="mark">decryption via trusted certificates</li>
+                </ul>
+
+                <section class="integration-ai title-article">
+                    <p>Integration with AI and security policies</p>
+                </section>
+
+                <p class="article-list">DPI results are transmitted to:</p>
+
+                <ul class="list">
+                    <li class="mark">rate-limiting and firewall rules</li>
+                    <li class="mark">AI-based threat detection</li>
+                    <li class="mark">policy engines (Zero Trust)</li>
+                    <li class="mark">SIEM and SOC systems</li>
+                </ul>
+
+                <aside class="aside">
+                    <p>This allows you to:</p>
+                </aside>
+
+                <ul class="list">
+                    <li class="mark">block connections in real time</li>
+                    <li class="mark">isolate clients</li>
+                    <li class="mark">adapt rules to the context</li>
+                    <li class="mark">train models on real traffic</li>
+                </ul>
+
+                <section class="system-response title-article">
+                    <p>System response</p>
+                </section>
+
+
+                <p class="article-list">
+                    After detecting a threat, the platform can:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">terminate the connection</li>
+                    <li class="mark">block the IP / ASN / fingerprint</li>
+                    <li class="mark">lower the traffic priority</li>
+                    <li class="mark">direct the traffic to the sandbox</li>
+                    <li class="mark">save the entire session for analysis</li>
+                </ul>
+
+                <p class="article">
+                    All actions are performed automatically, without operator intervention</p>
+                </p>
+
+                <section class="DPI-corporate title-article">
+                    <p>DPI in corporate and cloud environments</p>
+                </section>
+
+
+                <p class="article-list">
+                    Modern DPI engines support:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">Cloud & On-Premise deployments</li>
+                    <li class="mark">horizontal scaling</li>
+                    <li class="mark">microservice architecture</li>
+                    <li class="mark">high availability</li>
+                </ul>
+
+                <p class="aside-list">
+                    This makes DPI suitable for:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">ISPs</li>
+                    <li class="mark">banks</li>
+                    <li class="mark">SaaS platforms</li>
+                    <li class="mark">enterprise security</li>
+                </ul>
+
+        </div>
     </div>
     <script>
         fetch('../html/general/header.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementsByClassName('body-page-layout')[0].insertAdjacentHTML('afterbegin', html);
-            }).catch(err=>console.error("header is not loaded",err));
+            }).catch(err => console.error("header is not loaded", err));
+        fetch('../html/general/footer.html')
+            .then(r => r.text())
+            .then(html => {
+                document
+                    .querySelector('.body-page-layout')
+                    .insertAdjacentHTML('beforeend', html);
+            });
     </script>
 </body>
+
 </html>

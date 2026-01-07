@@ -3,10 +3,15 @@
 /* [LOGO] */
 
 .header-layout {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
     display: grid;
     grid-template-columns: minmax(6rem, 12rem) 1fr 1fr;
     height: 98px;
+    z-index: 10;
     /* background-color: red; */
 } 
 
