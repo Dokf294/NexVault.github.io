@@ -1,0 +1,438 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/added/page-two.css">
+    <title>AI-threat-documentation</title>
+</head>
+
+<body class="page-layout" data-color="green">
+    <div class="body-page-layout">
+        <div class="title">
+            <div class="title-top-header">
+                <p>AI-Based Threat Detection</p>
+            </div>
+            <div class="image">
+                <img src="../assets/image/metal_green.png" alt="">
+            </div>
+            <div class="title-bottom-header">
+                <p>How Artificial Intelligence Identifies Threats at the Application and Network Level</p>
+            </div>
+
+        </div>
+
+        <div class="article-to-text">
+            <section class="introduction title-article" style="height: 100px;">
+                <p>Introduction</p>
+            </section>
+
+
+            <p class="article">
+                Modern cyber threats no longer rely on static signatures or well-known attack patterns. Malware evolves
+                rapidly, attacks are disguised as legitimate traffic, and adversaries increasingly use automation and
+                artificial intelligence to bypass traditional security controls.
+            </p>
+
+            <p class="article">
+                AI-based Threat Detection represents the next generation of cybersecurity, where machine learning,
+                behavioral analysis, and contextual correlation are used to identify threats before they become
+                incidents. In enterprise security platforms, AI enables the detection of both known and unknown threats
+                in real time — even when no predefined signature exists.
+            </p>
+
+            <section class="packet-inspection title-article">
+                <p>What Is AI-Based Threat Detection</p>
+            </section>
+
+            <p class="article">
+                AI-based Threat Detection is a security approach in which decisions are made based on data-driven
+                analysis, behavior modeling, and probability, rather than relying solely on static rules.
+            </p>
+
+            <article class="article" style="padding-top: 2rem;">
+                These systems analyze:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">network traffic</li>
+                    <li class="mark">user and application behavior</li>
+                    <li class="mark">event sequences and timelines</li>
+                    <li class="mark">anomalies and deviations from normal activity</li>
+                </ul>
+
+                <p class="inside-text-example">
+                    Instead of asking “Does this match a known signature?”, AI-based systems ask:
+                </p>
+
+
+                <p class="exmaple-article">
+                    <i>“How likely is this behavior to be malicious compared to what is considered normal?”</i>
+                </p>
+
+                <section class="DPI title-article" style="padding-bottom: 2rem;">
+                    <p>The Role of AI in Modern Security Architecture</p>
+                </section>
+
+
+                <p class="article">
+                    In enterprise environments, AI does not replace traditional security mechanisms — it enhances and
+                    augments them.
+                </p>
+
+                <div class="example-1">
+                    <div class="example-title">
+                        <p>A typical AI-driven security architecture includes:</p>
+                    </div>
+                    <div class="example-object">Data Sources (Traffic, Logs, Events)</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Data Normalization & Enrichmente</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Feature Extraction</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Machine Learning Models</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Threat Scoring & Correlation</div>
+                    <div class="example-object"></div>
+                    <div class="example-object">Policy & Response Engine</div>
+                </div>
+
+                <p class="article">
+                    Each layer adds context, accuracy, and resilience against false positives.
+                </p>
+
+                <section class="packet-capture title-article" style="padding-bottom: 4rem;">
+                    <p>Data Sources for AI-Based Analysis</p>
+                </section>
+
+
+                <p class="article">
+                    AI-based Threat Detection relies on large volumes of high-quality data collected across the
+                    infrastructure, including:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">network traffic (L3–L7)</li>
+                    <li class="mark">DPI and firewall telemetry</li>
+                    <li class="mark">application logs</li>
+                    <li class="mark">authentication and identity events</li>
+                    <li class="mark">API requests</li>
+                    <li class="mark">TLS and DNS metadata</li>
+                    <li class="mark">behavioral telemetry</li>
+                </ul>
+
+                <p class="article-cursive">
+                    Security-relevant insights emerge from correlating these data sources, not analyzing them in
+                    isolation.
+                </p>
+
+
+
+                <section class="session-reconstruction title-article" style="padding-bottom: 4rem;">
+                    <p>Data Normalization and Enrichment</p>
+                </section>
+
+
+                <p class="article">
+                    Raw data is rarely suitable for direct AI analysis. Enterprise platforms perform:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">data normalization into unified formats</li>
+                    <li class="mark">noise reduction and deduplication</li>
+                    <li class="mark">contextual enrichment (geolocation, ASN, reputation)</li>
+                    <li class="mark">time synchronization across events</li>
+                </ul>
+
+                <p class="article">
+                    This process allows AI models to understand relationships and patterns, rather than disconnected
+                    signals.
+                </p>
+
+                <section class="protocol-decoding title-article">
+                    <p>Feature Extraction</p>
+                </section>
+
+
+                <p class="article">
+                    During feature extraction, raw data is transformed into quantifiable attributes that machine
+                    learning models can process.
+                </p>
+
+                <p class="article">Examples of extracted features include:</p>
+
+                <ul class="list">
+                    <li class="mark">request frequency and burst patterns</li>
+                    <li class="mark">payload size and structure</li>
+                    <li class="mark">action sequences</li>
+                    <li class="mark">response timing</li>
+                    <li class="mark">deviations from behavioral baselines</li>
+                    <li class="mark">abnormal parameter combinations</li>
+                </ul>
+
+                <p class="article">
+                    The quality of these features directly determines detection accuracy.
+                </p>
+
+                <section class="payload-inspection title-article" style="padding-bottom: 4rem;">
+                    <p>Machine Learning Models Used in Threat Detection</p>
+                </section>
+
+
+                <p class="article">
+                    Enterprise AI-based security platforms typically use multiple model types simultaneously:
+                </p>
+
+                <p class="article">
+                    Supervised Learning
+                </p>
+
+                <ul class="list">
+                    <li class="mark">trained on labeled attack data</li>
+                    <li class="mark">effective for threat classification</li>
+                    <li class="mark">requires curated datasets/li>
+                </ul>
+
+                <p class="article">
+                    Unsupervised Learning
+                </p>
+
+                <ul class="list">
+                    <li class="mark">detects anomalies without prior attack knowledge</li>
+                    <li class="mark">identifies zero-day threats</li>
+                    <li class="mark">builds dynamic behavioral baselines</li>
+                </ul>
+
+                <p class="article">
+                    Hybrid and Semi-Supervised Models
+                </p>
+
+                <ul class="list">
+                    <li class="mark">combine signature-based and behavioral approaches</li>
+                    <li class="mark">reduce false positives</li>
+                    <li class="mark">adapt to evolving environments</li>
+                </ul>
+
+                <p class="article">
+                    Model outputs are aggregated and correlated to form a final threat assessment.
+                </p>
+
+                <section class="analysis title-article">
+                    <p>Behavioral Analysis</p>
+                </section>
+
+
+                <p class="article">
+                    One of AI’s greatest strengths is its ability to analyze behavior over time, not just individual
+                    events.
+                </p>
+
+                <p class="article-list">For example:</p>
+
+                <ul class="list">
+                    <li class="mark">legitimate users exhibit gradual, predictable actions</li>
+                    <li class="mark">automated attacks show rapid, repetitive, or illogical patterns</li>
+                </ul>
+
+                <p class="article-list">AI-based systems analyze:</p>
+
+                <ul class="list">
+                    <li class="mark">action sequences</li>
+                    <li class="mark">interaction timing</li>
+                    <li class="mark">protocol and application logic violations</li>
+                    <li class="mark">role and identity inconsistencies/li>
+                </ul>
+
+                <p class="article" style="padding-top: 3rem;">
+                    Even syntactically valid requests can be flagged if behavior deviates from expected norms.
+                </p>
+
+                <section class="traffic title-article">
+                    <p>Contextual Threat Correlation</p>
+                </section>
+
+
+                <p class="article-list">A single anomaly rarely represents a full attack. AI correlates signals across
+                    multiple domains:</p>
+
+                <ul class="list">
+                    <li class="mark">network-level anomalies</li>
+                    <li class="mark">suspicious authentication behavior</li>
+                    <li class="mark">abnormal API usage</li>
+                    <li class="mark">changes in traffic patterns</li>
+                </ul>
+
+                <aside class="important">
+                    <span class="label">Instead of generating fragmented alerts, the platform produces</span>
+                    <strong style="line-height: 1.5;"> a unified incident with a quantified risk level.</strong>
+                </aside>
+
+                <p class="article-list">In corporate environments, the following is possible:</p>
+
+                <ul class="list">
+                    <li class="mark">SSL/TLS termination</li>
+                    <li class="mark">decryption via trusted certificates</li>
+                </ul>
+
+                <section class="integration-ai title-article">
+                    <p>Threat Scoring and Decision Making</p>
+                </section>
+
+
+                <p class="article">Each session, event, or entity is assigned a Threat Score based</p>
+
+                <p class="article-list">on:</p>
+
+                <ul class="list">
+                    <li class="mark">model confidence levels</li>
+                    <li class="mark">anomaly severity</li>
+                    <li class="mark">cumulative indicators</li>
+                    <li class="mark">environmental context</li>
+                </ul>
+
+                <aside class="aside">
+                    <p>This scoring enables:</p>
+                </aside>
+
+                <ul class="list">
+                    <li class="mark">intelligent prioritization</li>
+                    <li class="mark">automated, risk-based responses</li>
+                    <li class="mark">reduced alert fatigue for security teams</li>
+                </ul>
+
+                <section class="system-response title-article" style="padding-bottom: 2rem;">
+                    <p>Real-Time Response and Mitigation</p>
+                </section>
+
+
+                <p class="article-list">
+                    Based on AI-driven assessments, the platform can automatically:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">block or terminate connections</li>
+                    <li class="mark">enforce step-up authentication</li>
+                    <li class="mark">restrict or rate-limit access</li>
+                    <li class="mark">isolate suspicious entities</li>
+                    <li class="mark">redirect traffic to sandbox environments</li>
+                </ul>
+
+                <p class="article">
+                    Responses are adaptive, proportional to risk, and executed in real time.</p>
+                </p>
+
+                <section class="DPI-corporate title-article">
+                    <p>Continuous Learning and Adaptation</p>
+                </section>
+
+
+                <p class="article-list">
+                    Enterprise AI-based security systems continuously evolve by:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">updating behavioral baselines</li>
+                    <li class="mark">adapting to infrastructure changes</li>
+                    <li class="mark">learning from false positives and analyst feedback</li>
+                    <li class="mark">incorporating real-world incident data</li>
+                </ul>
+
+                <p class="aside-list">
+                    This adaptability is critical for:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">cloud-native environments</li>
+                    <li class="mark">SaaS platforms</li>
+                    <li class="mark">microservices architectures</li>
+                    <li class="mark">distributed enterprise networks</li>
+                </ul>
+
+                <section class="DPI-corporate title-article">
+                    <p>Conclusion</p>
+                </section>
+
+
+                <p class="article">
+                    AI-based Threat Detection represents a fundamental shift in cybersecurity, moving from reactive,
+                    rule-based defense to proactive, intelligence-driven protection.
+                </p>
+
+                <p class="article-list">
+                    In modern enterprise security platforms, artificial intelligence:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">detects unknown and zero-day threats</li>
+                    <li class="mark">reduces false positives</li>
+                    <li class="mark">operates in real time</li>
+                    <li class="mark">continuously adapts to the environment</li>
+                </ul>
+
+                <p class="article">
+                    As cyber threats continue to evolve, AI becomes an essential pillar of application and network
+                    security.
+                </p>
+
+                <section class="DPI-corporate title-article" style="padding-bottom: 4rem;">
+                    <p>AI-Based Threat Detection in Enterprise Environments</p>
+                </section>
+
+                <p class="article-list">
+                    AI-driven threat detection is widely deployed across:
+                </p>
+
+                <ul class="list">
+                    <li class="mark">financial institutions</li>
+                    <li class="mark">large-scale SaaS platforms</li>
+                    <li class="mark">telecommunications infrastructure</li>
+                    <li class="mark">global enterprise networks</li>
+                </ul>
+
+                <p class="article">
+                    These systems are designed for high availability, horizontal scalability, and seamless integration
+                    with existing security ecosystems.
+                </p>
+        </div>
+
+    </div>
+    <script>
+        function initFooterAnimation() {
+            const text = document.querySelector('.footer-text');
+            if (!text) return;
+
+            let mouseX = 50, mouseY = 50;
+            let currentX = 50, currentY = 50;
+
+            document.addEventListener("mousemove", (e) => {
+                const rect = text.getBoundingClientRect();
+                mouseX = ((e.clientX - rect.left) / rect.width) * 100;
+                mouseY = ((e.clientY - rect.top) / rect.height) * 100;
+            });
+
+            function animate() {
+                currentX += (mouseX - currentX) * 0.1;
+                currentY += (mouseY - currentY) * 0.1;
+                text.style.setProperty('--x', `${currentX}%`);
+                text.style.setProperty('--y', `${currentY}%`);
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+        fetch('../html/general/header.txt')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementsByClassName('body-page-layout')[0].insertAdjacentHTML('afterbegin', html);
+            }).catch(err => console.error("header is not loaded", err));
+        fetch('../html/general/footer.txt')
+            .then(r => r.text())
+            .then(html => {
+                document
+                    .querySelector('.body-page-layout')
+                    .insertAdjacentHTML('beforeend', html);
+                    initFooterAnimation();
+            });
+    </script>
+</body>
+
+</html>

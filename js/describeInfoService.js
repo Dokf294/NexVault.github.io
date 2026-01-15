@@ -1,32 +1,75 @@
-let slots = document.querySelectorAll(".slot-services");
+const slots = document.querySelectorAll(".slot-services");
+let openedSlot = null;
 
-function arrowAnim(arrow, todeg){
-    arrow.style.transform = `rotate(${todeg}deg)`
-};
-slots.forEach(btn => {
+function arrowAnim(arrow, deg) {
+    if (arrow) arrow.style.transform = `rotate(${deg}deg)`;
+}
+
+function closeSlot(btn) {
+    if (!btn) return;
+    const text = btn.querySelector('.text');
+    const button = btn.querySelector('.button');
+    const arrow = btn.querySelector('.stat-deployed svg');
+
+    text.style.maxHeight = '0';
+    button.style.maxHeight = '0';
+    text.style.opacity = '0';
+    button.style.opacity = '0';
+    arrowAnim(arrow, 0);
+
+    btn.dataset.open = "false";
+
+    let img = document.querySelector("." + btn.dataset.image);
+    if (img) img.style.opacity = "0";
+}
+
+function openSlot(btn) {
+    if (!btn) return;
+    const text = btn.querySelector('.text');
+    const button = btn.querySelector('.button');
+    const arrow = btn.querySelector('.stat-deployed svg');
+
+    if (!text.dataset.maxHeight)
+        text.dataset.maxHeight = text.scrollHeight + 'px';
+
+    if (!button.dataset.maxHeight)
+        button.dataset.maxHeight = (button.scrollHeight + 80) + 'px';
+
+    text.style.maxHeight = text.dataset.maxHeight;
+    button.style.maxHeight = button.dataset.maxHeight;
+    text.style.opacity = '1';
+    button.style.opacity = '1';
+    arrowAnim(arrow, 180);
+
+    btn.dataset.open = "true";
+
+    let img = document.querySelector("." + btn.dataset.image);
+    if (img) img.style.opacity = "1";
+}
+
+slots.forEach((btn, index) => {
+    btn.dataset.open = "false";
+
     btn.addEventListener('click', () => {
-        let isOpen = btn.dataset.open === "true";
-        const text = btn.getElementsByClassName('text')[0];
-        const button = btn.getElementsByClassName('button')[0];
-        const arrow=btn.querySelector('.stat-deployed svg'); 
+        const isOpen = btn.dataset.open === "true";
 
-        if (!text.dataset.maxHeight) text.dataset.maxHeight = text.scrollHeight + 'px';
-        if (!button.dataset.maxHeight) button.dataset.maxHeight = (button.scrollHeight+50) + 'px';
-
+        
         if (isOpen) {
-            text.style.maxHeight = '0';
-            button.style.maxHeight = '0';
-            text.style.opacity = '0';
-            button.style.opacity = '0';
-            arrowAnim(arrow, 0);
-        } else {
-            text.style.maxHeight = text.dataset.maxHeight;
-            button.style.maxHeight = button.dataset.maxHeight;
-            text.style.opacity = '1';
-            button.style.opacity = '1';
-            arrowAnim(arrow, 180);
+            return;
         }
-        btn.dataset.open = (!isOpen).toString();
+
+        if (openedSlot && openedSlot !== btn) {
+            closeSlot(openedSlot);
+        }
+
+        openSlot(btn);
+        openedSlot = btn;
     });
+
+    if (index === 0) {
+        openSlot(btn);
+        openedSlot = btn;
+    }
 });
+
 

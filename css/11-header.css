@@ -9,9 +9,9 @@
     
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(6rem, 12rem) 1fr 1fr;
+    grid-template-columns: minmax(6rem, 12rem) 1fr auto;
     height: 98px;
-    z-index: 999;
+    z-index: 999; 
     /* background-color: red; */
 } 
 
@@ -116,9 +116,8 @@
     /* background-color: #211f1f; */
     height: 55%;
     max-width: 17rem;
-    width: 50%;
+    width: 100%;
     white-space: nowrap;
-
     /* background-color: #fff; */
 }
 
@@ -202,5 +201,22 @@
 @media (max-width: 600px) {
     .right-options .option-language .language {
         width: 5.5rem;
+    }
+} 
+
+@media (max-width: 1000px) {
+    .header-layout .left-options .option{
+        display: none;
+    } 
+}
+
+
+
+@media (max-width: 800px) {
+    .header-layout{
+        grid-template-columns: minmax(6rem, 12rem) 1px 1fr;
+    }
+    .right-options .option {
+        width: 30%;
     }
 }

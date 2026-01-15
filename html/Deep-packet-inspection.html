@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/added/page-two.css">
-    <title></title>
+    <title>deep-packet-inspection</title>
 </head>
 
 <body class="page-layout">
@@ -367,6 +367,29 @@
         </div>
     </div>
     <script>
+        function initFooterAnimation() {
+            const text = document.querySelector('.footer-text');
+            if (!text) return;
+
+            let mouseX = 50, mouseY = 50;
+            let currentX = 50, currentY = 50;
+
+            document.addEventListener("mousemove", (e) => {
+                const rect = text.getBoundingClientRect();
+                mouseX = ((e.clientX - rect.left) / rect.width) * 100;
+                mouseY = ((e.clientY - rect.top) / rect.height) * 100;
+            });
+
+            function animate() {
+                currentX += (mouseX - currentX) * 0.1;
+                currentY += (mouseY - currentY) * 0.1;
+                text.style.setProperty('--x', `${currentX}%`);
+                text.style.setProperty('--y', `${currentY}%`);
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
         fetch('../html/general/header.txt')
             .then(response => response.text())
             .then(html => {
@@ -378,6 +401,7 @@
                 document
                     .querySelector('.body-page-layout')
                     .insertAdjacentHTML('beforeend', html);
+                    initFooterAnimation();
             });
     </script>
 </body>

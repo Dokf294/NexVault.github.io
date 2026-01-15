@@ -24,6 +24,7 @@
                 </div>
             </div>
             <div class="header">
+                
                 <div class="motivational-text">
                     <div class="motional">
                         <p>Neutralizing threats is important, but preventing them is more effective. </p>
@@ -59,14 +60,25 @@
                             <path d="M0 10.332L20 10.332"></path>
                         </svg>
                     </div>
-                    <!-- <img src="../assets/image/shield.png" alt=""> -->
+
+                    <div class="container-img">
+                        <img class="async-img" src="../assets/image/image_pack1/DeepAsync.png" alt="" loading="lazy"
+                            style="opacity: 1;">
+                        <img class="ai-img" src="../assets/image/image_pack1/Ai-threats.psd.png" alt="" loading="lazy"
+                            style="opacity: 0;">
+                        <img class="source-img" src="../assets/image/image_pack1/source.png" alt="" loading="lazy"
+                            style="opacity: 0;">
+                        <img class="sp-cl-img" src="../assets/image/image_pack1/support_and_cloud.psd.png" alt=""
+                            loading="lazy" style="opacity: 0;">
+                    </div>
+
                 </div>
                 <div class="provide-services">
                     <div class="provide-header">
                         <h1>Our Services</h1>
                     </div>
                     <div class="provide">
-                        <div class="packet-inspection slot-services">
+                        <div class="packet-inspection slot-services" data-image="async-img">
                             <h3 class="protection-header">Deep Packet Inspection</h3>
                             <div class="stat-deployed">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -78,7 +90,9 @@
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, corrupti
                                 illo. Voluptates, incidunt iste? Debitis.</p>
                             <button class="button" type="button">
-                                <p>Learn more</p>
+                                <a href="../html/Deep-packet-inspection.html" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Learn more">Learn more</a>
+
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -86,7 +100,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="ai-threat slot-services">
+                        <div class="ai-threat slot-services" data-image="ai-img">
                             <h3 class="protection-header">AI-based threat detection</h3>
                             <div class="stat-deployed">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -98,7 +112,8 @@
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, corrupti
                                 illo. Voluptates, incidunt iste? Debitis.</p>
                             <button class="button" type="button">
-                                <p>Learn more</p>
+                                <a href="../html/ai-threat-detection.html" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Learn more">Learn more</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -106,7 +121,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="ddos-protection slot-services">
+                        <div class="ddos-protection slot-services" data-image="source-img">
                             <h3 class="protection-header">DDoS protection</h3>
                             <div class="stat-deployed">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -118,7 +133,8 @@
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, corrupti
                                 illo. Voluptates, incidunt iste? Debitis.</p>
                             <button class="button" type="button">
-                                <p>Learn more</p>
+                                <a href="../html/ddos-protection.html" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Learn more">Learn more</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -126,7 +142,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="cloud-support slot-services">
+                        <div class="cloud-support slot-services" data-image="sp-cl-img">
                             <h3 class="protection-header">Cloud & On-Premise support</h3>
                             <div class="stat-deployed">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -138,7 +154,8 @@
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, corrupti
                                 illo. Voluptates, incidunt iste? Debitis.</p>
                             <button class="button" type="button">
-                                <p>Learn more</p>
+                                <a href="../html/cloud.html" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Learn more">Learn more</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -225,52 +242,360 @@
                 </div>
             </div>
             <div class="purchase">
-                <div class="start-up-package">
-                    <div class="image-package">
-                        <img src="../assets/image/start-up.png" loading="lazy" alt="">
+                <div id="live-bg"></div>
+                <div class="start-up-package both-packages">
+                    <div class="logo">
+                        <img src="../assets/svg/payload.svg" alt="" loading="lazy">
+                        <p>NexVault</p>
                     </div>
-                    <div class="company-icons-package">
+                    <div class="motional-text">
+                        <p>PROTECT
+                            <br> ENTRY
+                        </p>
+                    </div>
+                    <!-- <div class="company-icons-package">
+                        <div class="icons-track">
+                            <img src="../assets/svg/companys/AAA.svg" alt="" loading="lazy" style="height: 70px;">
+                            <img src="../assets/svg/companys/AV-test.svg" alt="" loading="lazy">
+                            <img src="../assets/svg/companys/champion-2022.svg" alt="" loading="lazy"
+                                style="height: 80px;">
+                            <img src="../assets/svg/companys/AV.svg" alt="" loading="lazy">
+                            <img src="../assets/svg/companys/top.svg" alt="" loading="lazy">
 
-                    </div>
+                            <img src="../assets/svg/companys/AAA.svg" alt="" loading="lazy" style="height: 70px;">
+                            <img src="../assets/svg/companys/AV-test.svg" alt="" loading="lazy">
+                            <img src="../assets/svg/companys/champion-2022.svg" alt="" loading="lazy"
+                                style="height: 80px;">
+                            <img src="../assets/svg/companys/AV.svg" alt="" loading="lazy">
+                            <img src="../assets/svg/companys/top.svg" alt="" loading="lazy">
+                        </div>
+                    </div> -->
                     <div class="describes-package">
-                        Get access to important data protection. The package includes the following features: Deep
-                        Packet Inspection, AI-based threat detection, DDoS protection, Cloud & On-Premise support.
-                        Additional built-in features are also included.
+                        <p> Get access to advanced data protection with Deep Packet Inspection, AI-based threat
+                            detection, DDoS protection, and Cloud & On-Premise support — plus additional built-in
+                            features.
+                        </p>
                     </div>
                     <div class="date-package">
-                        <p>"1 Month"</p>
-                        <input type="text">
+                        <div class="left-side">
+                            <div class="buttons">
+                                <span id="minus">
+                                    <span>–</span>
+                                </span>
+                                <span id="input">
+                                    <input type="text" id="mouth-year" value="1">
+                                </span>
+                                <span id="plus">
+                                    <span>+</span>
+                                </span>
+                            </div>
+                            <div id="label-package">
+                                <p>1 Month</p>
+                            </div>
+                        </div>
+                        <div class="right-side">
+                            <div class="buttons">
+                                <span id="minus">
+                                    <span>–</span>
+                                </span>
+                                <span id="input">
+                                    <input type="text" id="mouth-year" value="1">
+                                </span>
+                                <span id="plus">
+                                    <span>+</span>
+                                </span>
+                            </div>
+                            <div id="label-package">
+                                <p>1 Year</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sales-price-promotion-text">
+                        Save $59 with 2 years
                     </div>
                     <div class="price-package">
-                        $10.00
+                        <span>$</span>295. <span>00</span>
                     </div>
                     <div class="buy-package">
-                        ADD TO CARD
+                        <button>ADD TO CARD</button>
                     </div>
                     <div class="options-package">
-                        <div class="console"></div>
-                        <div class="modern"></div>
-                        <div class="server"></div>
+                        <div class="has-options">
+                            <div class="console">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Console (cloud/on-prem)</p>
+                            </div>
+                            <div class="modern">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Modern Endpoint Protection with Next-gen Antivirus</p>
+                            </div>
+                            <div class="server">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Server Security</p>
+                            </div>
+                            <div class="ai-detected-threats">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>I-based threat detection</p>
+                            </div>
+                            <div class="ddos-protection">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>DDoS protection</p>
+                            </div>
+                            <div class="deep-package">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Deep Packet Inspection</p>
+                            </div>
+                            <div class="cloads">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Cload</p>
+                            </div>
+                        </div>
+                        <div class="hasnt-options">
+                            <div class="disk">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <p>Full Disk Encryption</p>
+                            </div>
+                            <div class="mail-security">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <p>Mail Server Security</p>
+                            </div>
+                            <div class="vulnerability-management">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <p>Vulnerability & Patch Management</p>
+                            </div>
+
+                            <div class="real-time-analytics">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <p>Real-Time Behavioral Analytics</p>
+                            </div>
+
+                            <div class="soar">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <p>Automated Incident Response (SOAR)</p>
+                            </div>
+                            <div class="advanced-threats">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <p>Advanced Threat Intelligence Feeds</p>
+                            </div>
+                            <div class="toolkit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <p>Compliance & Forensics Toolkit</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="buisnesses-package">
-                    <div class="company-icons-package">
-                        <img src="../assets/image/Buisness.png" loading="lazy" alt="">
+                <div class="buisnesses-package both-packages">
+                    <div class="logo">
+                        <img src="../assets/svg/payload.svg" alt="" loading="lazy">
+                        <p>NexVault</p>
+                    </div>
+                    <div class="motional-text">
+                        <p>PROTECT
+                            <br> ENTRY
+                        </p>
                     </div>
                     <div class="describes-package">
-                        Access features for start-ups as well as additional features for corporate protection: Real-Time
-                        Behavioral Analytics, Automated Incident Response (SOAR), Advanced Threat Intelligence Feeds,
-                        Compliance & Forensics Toolkit. Additional built-in features are also included.
+                        <p>Get access to start-up protection plus corporate-grade security, including Real-Time
+                            Behavioral
+                            Analytics, SOAR, Advanced Threat Intelligence, and Compliance & Forensics tools — with
+                            additional built-in features.</p>
                     </div>
-                    <div class="date-package"></div>
-                    <div class="price-package"></div>
-                    <div class="buy-package"></div>
-                    <div class="options-package"></div>
+                    <div class="date-package">
+                        <div class="left-side">
+                            <div class="buttons">
+                                <span id="minus">
+                                    <span>–</span>
+                                </span>
+                                <span id="input">
+                                    <input type="text" id="mouth-year" value="1">
+                                </span>
+                                <span id="plus">
+                                    <span>+</span>
+                                </span>
+                            </div>
+                            <div id="label-package">
+                                <p>1 Month</p>
+                            </div>
+                        </div>
+                        <div class="right-side">
+                            <div class="buttons">
+                                <span id="minus">
+                                    <span>–</span>
+                                </span>
+                                <span id="input">
+                                    <input type="text" id="mouth-year" value="1">
+                                </span>
+                                <span id="plus">
+                                    <span>+</span>
+                                </span>
+                            </div>
+                            <div id="label-package">
+                                <p>1 Year</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sales-price-promotion-text">
+                        Save $59 with 2 years
+                    </div>
+                    <div class="price-package">
+                        <span>$</span>295. <span>00</span>
+                    </div>
+                    <div class="buy-package">
+                        <button>ADD TO CARD</button>
+                    </div>
+                    <div class="options-package">
+                        <div class="has-options">
+                            <div class="console">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Console (cloud/on-prem)</p>
+                            </div>
+                            <div class="modern">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Modern Endpoint Protection with Next-gen Antivirus</p>
+                            </div>
+                            <div class="server">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Server Security</p>
+                            </div>
+
+                            <div class="disk">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Full Disk Encryption</p>
+                            </div>
+                            <div class="mail-security">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Mail Server Security</p>
+                            </div>
+                            <div class="vulnerability-management">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Vulnerability & Patch Management</p>
+                            </div>
+
+                            <div class="ai-detected-threats">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>I-based threat detection</p>
+                            </div>
+                            <div class="ddos-protection">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>DDoS protection</p>
+                            </div>
+                            <div class="deep-package">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Deep Packet Inspection</p>
+                            </div>
+                            <div class="cloads">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Cload</p>
+                            </div>
+                            <div class="real-time-analytics">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Real-Time Behavioral Analytics</p>
+                            </div>
+                            <div class="soar">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Automated Incident Response (SOAR)</p>
+                            </div>
+                            <div class="advanced-threats">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Advanced Threat Intelligence Feeds</p>
+                            </div>
+                            <div class="toolkit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <p>Compliance & Forensics Toolkit</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
+    <script src="../js/bg.js"></script>
+    <script src="../js/input.js"></script>
     <script>
         function initFooterAnimation() {
             const text = document.querySelector('.footer-text');

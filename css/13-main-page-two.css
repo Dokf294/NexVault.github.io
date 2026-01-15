@@ -1,3 +1,23 @@
+:root{
+    --theme-color: hsl(36, 83%, 77%);
+} 
+
+.page-layout[data-color="green"]{
+    --theme-color: hsl(113, 63%, 72%);
+} 
+
+.page-layout[data-color="yellow"]{
+    --theme-color: hsl(36, 83%, 77%);
+} 
+
+.page-layout[data-color="purple"]{
+    --theme-color: hsl(295, 94%, 51%);
+} 
+
+.page-layout[data-color="red"]{
+    --theme-color: hsl(0, 56%, 57%);
+} 
+
 .title,
 .article-to-text {
     padding-top: 6rem;
@@ -38,7 +58,7 @@
 }
 
 .title .title-bottom-header {
-    color: hsl(36, 83%, 77%);
+    color: var(--theme-color);
     padding-left: 2.5rem;
     font-size: 1.1rem;
 }
@@ -59,7 +79,7 @@
 .title-article {
     font-size: 4.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
-    color: hsl(36, 83%, 77%);
+    color: var(--theme-color);
     height: 100px;
 }
 
@@ -84,14 +104,13 @@
 
 .list .mark {
     padding: 1rem;
-    color: hsl(36, 83%, 77%);
+    color: var(--theme-color);
 } 
 
 .article-to-text .example-1{
     position: relative;
     display: flex;
     left: 50%;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: hsl(0, 0%, 0%); 
@@ -102,12 +121,15 @@
 .article-to-text .example-1::before{
     content: "";
     position: absolute;
-    top: 8%;
+    top: 10%;
     height: 90%;
-    width: 49%;
+    width: 51%;
+    min-width: 29.5rem;
     border-left: 1px solid #fff;
-
+    /* background-color: rgba(255, 0, 0, 0.226); */
 }
+
+
 .article-to-text  .example-1 .example-title{
     font-size: 2.5rem;
 }
@@ -154,11 +176,13 @@
     border-left: 1px solid #fff;
     
 }
+
 .article-to-text .example-2 :is(.user, .bot) :first-child{
     color: hsl(36, 83%, 77%);
     font-size: 30px;
     margin-top: .5rem;
 }
+
 .article-to-text .example-2 :is(.user, .bot) :nth-child(even){
     background-image: url(../assets/svg/arrowright_long.svg);
     background-size: cover;
