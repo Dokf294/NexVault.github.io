@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="header">
-                
+
                 <div class="motivational-text">
                     <div class="motional">
                         <p>Neutralizing threats is important, but preventing them is more effective. </p>
@@ -604,19 +604,33 @@
             let mouseX = 50, mouseY = 50;
             let currentX = 50, currentY = 50;
 
+            let rect = text.getBoundingClientRect();
+            let needsUpdate = false;
+
             document.addEventListener("mousemove", (e) => {
-                const rect = text.getBoundingClientRect();
                 mouseX = ((e.clientX - rect.left) / rect.width) * 100;
                 mouseY = ((e.clientY - rect.top) / rect.height) * 100;
-            });
+                needsUpdate = true;
+            }, { passive: true });
 
             function animate() {
-                currentX += (mouseX - currentX) * 0.1;
-                currentY += (mouseY - currentY) * 0.1;
-                text.style.setProperty('--x', `${currentX}%`);
-                text.style.setProperty('--y', `${currentY}%`);
+                if (needsUpdate) {
+                    currentX += (mouseX - currentX) * 0.1;
+                    currentY += (mouseY - currentY) * 0.1;
+
+                    text.style.setProperty('--x', `${currentX}%`);
+                    text.style.setProperty('--y', `${currentY}%`);
+
+                    needsUpdate = false;
+                }
+
                 requestAnimationFrame(animate);
             }
+
+            window.addEventListener('resize', () => {
+                rect = text.getBoundingClientRect();
+            });
+
             animate();
         }
 
