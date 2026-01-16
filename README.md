@@ -22,6 +22,6 @@ Follow these steps to run the project locally:
       - Open VS Code → Extensions → search "Live Server" → Install
 
 5. **Open the project html folder**
-6. **Right-click nexVaultIndex.html → "Open with Live Server"**
+6. **Right-click Nexvault.html → "Open with Live Server"**
 
 ## DEMO VIEW SITE

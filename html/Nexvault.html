@@ -603,13 +603,16 @@
 
             let mouseX = 50, mouseY = 50;
             let currentX = 50, currentY = 50;
-
-            let rect = text.getBoundingClientRect();
             let needsUpdate = false;
 
             document.addEventListener("mousemove", (e) => {
+                const rect = text.getBoundingClientRect(); 
+
+                if (!rect.width || !rect.height) return;
+
                 mouseX = ((e.clientX - rect.left) / rect.width) * 100;
                 mouseY = ((e.clientY - rect.top) / rect.height) * 100;
+
                 needsUpdate = true;
             }, { passive: true });
 
@@ -627,28 +630,28 @@
                 requestAnimationFrame(animate);
             }
 
-            window.addEventListener('resize', () => {
-                rect = text.getBoundingClientRect();
-            });
-
             animate();
         }
 
         fetch('../html/general/header.txt')
-            .then(response => response.text())
+            .then(r => r.text())
             .then(html => {
-                document.getElementsByClassName('body-page-layout')[0].insertAdjacentHTML('afterbegin', html);
-            }).catch(err => console.error("header is not loaded", err));
+                document.querySelector('.body-page-layout')
+                    .insertAdjacentHTML('afterbegin', html);
+            });
 
         fetch('../html/general/footer.txt')
             .then(r => r.text())
             .then(html => {
-                document
-                    .querySelector('.body-page-layout')
-                    .insertAdjacentHTML('beforeend', html);
-                initFooterAnimation();
+                const layout = document.querySelector('.body-page-layout');
+                layout.insertAdjacentHTML('beforeend', html);
+
+                requestAnimationFrame(() => {
+                    initFooterAnimation();
+                });
             });
     </script>
+
     <script src="../js/describeInfoService.js"></script>
 </body>
 
