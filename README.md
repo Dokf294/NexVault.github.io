@@ -9,7 +9,7 @@ Create a functional and interactive website for an antivirus sales company
 - **Languages:** Html, CSS, JavaScript
 
 ## System requirements
-  - **** Linux|MacOS|Windows
+- Linux|MacOS|Windows
 
 ## Quick setup
 
@@ -23,3 +23,5 @@ Follow these steps to run the project locally:
 
 4. **Open the project html folder**
 5. **Right-click nexVaultIndex.html → "Open with Live Server"**
+
+## DEMO VIEW SITE
