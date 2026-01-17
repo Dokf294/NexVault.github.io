@@ -59,7 +59,7 @@
             <input type="text" placeholder="Enter email">
         </div>
         <div class="column2 column">
-            <a aria-label="Payload's Twitter page" class="Footer_socialIconLink" href="https://twitter.com/payloadcms"
+            <a aria-label="NexVault's Twitter page" class="Footer_socialIconLink" href="#"
                 rel="noopener noreferrer" target="_blank"><svg fill="none" height="32" viewBox="0 0 32 32" width="32"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.8496 22.7227H20.2051L9.4668 8.68359H11.2324L21.8496 22.7227Z" fill="white">
@@ -69,7 +69,7 @@
                         fill="white" fill-rule="evenodd"></path>
                 </svg>
             </a>
-            <a aria-label="Payload's Discord" class="Footer_socialIconLink" href="https://discord.com/invite/r6sCXqVk3v"
+            <a aria-label="NexVault's Discord" class="Footer_socialIconLink" href="#"
                 rel="noopener noreferrer" target="_blank"><svg fill="none" height="32" viewBox="0 0 32 32" width="32"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -83,8 +83,8 @@
                         fill="currentColor" fill-rule="evenodd"></path>
                 </svg>
             </a>
-            <a aria-label="Payload's YouTube channel" class="Footer_socialIconLink"
-                href="https://www.youtube.com/channel/UCyrx4Wpd4SBIpqUKlkb6N1Q" rel="noopener noreferrer"
+            <a aria-label="NexVault's YouTube channel" class="Footer_socialIconLink"
+                href="#" rel="noopener noreferrer"
                 target="_blank"><svg fill="none" height="32" viewBox="0 0 32 32" width="32"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.625 19.1064V12.8848L19.959 15.9902L13.625 19.1064Z" fill="white"></path>
@@ -93,8 +93,8 @@
                         fill="white" fill-rule="evenodd"></path>
                 </svg>
             </a>
-            <a aria-label="Payload's Instagram page" class="Footer_socialIconLink"
-                href="https://www.instagram.com/payloadcms/" rel="noopener noreferrer" target="_blank"><svg fill="none"
+            <a aria-label="NexVault's Instagram page" class="Footer_socialIconLink"
+                href="#" rel="noopener noreferrer" target="_blank"><svg fill="none"
                     height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12.834 16.5049C12.834 18.2539 14.252 19.6709 16 19.6709C17.75 19.6709 19.166 18.2539 19.166 16.5049C19.166 14.7559 17.75 13.3379 16 13.3379C14.252 13.3379 12.834 14.7559 12.834 16.5049Z"
