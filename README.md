@@ -1,17 +1,17 @@
-# NEXVAULT - secure software 
+# 🖥️NEXVAULT🖥️ - secure software 
 
-## the purpose: 
+## 👉the purpose: 
 
 Create a functional and interactive website for an antivirus sales company 
 
-## Technology stack 
+## 👉Technology stack 
 
 - **Languages:** Html, CSS, JavaScript
 
-## System requirements
+## 👉System requirements
 - Linux|MacOS|Windows
 
-## Quick setup
+## 👉Quick setup
 
 Follow these steps to run the project locally:
 
@@ -24,5 +24,5 @@ Follow these steps to run the project locally:
 5. **Open the project html folder**
 6. **Right-click Nexvault.html → "Open with Live Server"**
 
-## DEMO VIEW SITE
+## 👉DEMO VIEW SITE
 ![Demo](inc/nexvaultDemo.gif)
