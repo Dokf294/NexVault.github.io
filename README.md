@@ -25,3 +25,4 @@ Follow these steps to run the project locally:
 6. **Right-click Nexvault.html → "Open with Live Server"**
 
 ## DEMO VIEW SITE
+![Demo](inc/nexvaultDemo.gif)
