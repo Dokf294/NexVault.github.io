@@ -1,10 +1,10 @@
 const liveBg = document.getElementById('live-bg');
 
 const images = [
-    "../assets/svg/companysDarkWhite/AAA.svg",
-    "../assets/svg/companysDarkWhite/AV-new.svg",
-    "../assets/svg/companysDarkWhite/champion.svg",
-    "../assets/svg/companysDarkWhite/AV.svg"
+    "assets/svg/companysDarkWhite/AAA.svg",
+    "assets/svg/companysDarkWhite/AV-new.svg",
+    "assets/svg/companysDarkWhite/champion.svg",
+    "assets/svg/companysDarkWhite/AV.svg"
 ];
 
 const gap = 600;           
